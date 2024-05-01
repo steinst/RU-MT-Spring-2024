@@ -10,4 +10,8 @@
 #SBATCH --output=slurm_job_output.log
 #SBATCH --error=slurm_job_errors.log   # Logs if job crashes
 
-~/.conda/envs/alma-r/bin/python  /jotunn/home/steinst/ALMA/7BR_translate_batch_isen.py
+~/.conda/envs/alma-r/bin/python  /jotunn/home/steinst/ALMA/ALMA_translate_batch.py ../RU-MT-Spring-2024/Evaluation/source/newstest2021-is-en.src.is 7 isen
+
+sentences_in = sys.argv[1]
+alma_parameters_B = sys.argv[2]
+lang_pair = sys.argv[3]
