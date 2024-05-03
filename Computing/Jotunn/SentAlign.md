@@ -12,10 +12,12 @@ pip3 install torch torchvision torchaudio --index-url https://download.pytorch.o
 ```
 
 ### Interactive mode
+```bash
 srun --job-name "InteractiveJob" --partition Jotunn-GPU --cpus-per-task 24 --mem-per-cpu 3900 --time 1-00:00:00 --pty bash
 conda activate SentAlign
 cd SentAlign
 python3 files2align.py -dir eval_data/bleualign --source-language deu
 python3 sentAlign.py -dir eval_data/bleualign -sl deu -tl fra
+```
 ### Batch mode
 You should be able to create your own sbatch-file for the slurm job, if you just look at the file for ALMA.
